@@ -1,0 +1,34 @@
+<div>
+  <a routerLink="/home/alquiler">
+    <img src="/assets/Imagenes/atras.png" class="boton_regresar" alt="Botón Regresar" />
+  </a>
+  <p class="Titulo">Registrar Alquiler</p>
+</div>
+
+<form (ngSubmit)="onSubmit()">
+  <div class="espacio">
+    <label for="lector" class="datos">Lector:</label>
+    <select class="tipo_doc" id="lectores" [(ngModel)]="alquiler.lectores" name="lectores">
+      <option *ngFor="let lectors of lector" [ngValue]="lectors">{{lectors.nombre}}</option>
+    </select>
+  </div>
+
+  <div class="espacio">
+    <label for="fechaEntrada" class="fecha_inicio">Fecha Entrada:</label>
+    <input type="date" id="fecha_entrada" [(ngModel)] = "alquiler.fecha_entrada" name="fecha_entrada" class="form-control" />
+  </div>
+
+  <div class="espacio">
+    <label for="fechaEntrada" class="fecha_inicio">Fecha Salida:</label>
+    <input type="date" id="fecha_salida" [(ngModel)] = "alquiler.fecha_salida" name="fecha_salida" class="form-control" />
+  </div>
+
+  <div class="espacio">
+    <label for="lector" class="datos">Libro:</label>
+    <select class="tipo_doc" id="libros" [(ngModel)]="alquiler.libros" name="libros">
+      <option *ngFor="let libr of libro" [ngValue]="libr">{{libr.titulo}}</option>
+    </select>
+  </div>
+
+  <button type="submit">Guardar</button>
+</form>

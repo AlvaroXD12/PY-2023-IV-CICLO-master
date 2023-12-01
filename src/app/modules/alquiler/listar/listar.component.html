@@ -1,0 +1,41 @@
+
+     <div>
+        <a href="/menu"><img src="/assets/Imagenes/atras.png" class="boton_regresar"></a>
+        <p class="Titulo">Lista de Alquileres</p>
+    </div>
+    <div class="crear_buscar">
+        <div class="boton_crear">
+            <a [routerLink]="['/home/alquiler/agregar']" class="crear">
+                <p>REGISTRAR</p>
+            </a>
+        </div>
+    </div>
+    <div class="container_tabla">
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th class="id">N°</th>
+                    <th class="nombre_afiliacion">Nombre del Lector</th>
+                    <th class="nombre_afiliacion">Fecha Entrada</th>
+                    <th class="nombre_afiliacion">Fecha Salida</th>
+                    <th class="nombre_afiliacion">Titulo del Libro</th>
+                    <th colspan="3" class="acción">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let alqui of alquiler">
+                    <td>{{alqui.id}}</td>
+                    <td>{{alqui.lectores?.nombre}}</td>
+                    <td>{{alqui.fecha_entrada}}</td>
+                    <td>{{alqui.fecha_salida}}</td>
+                    <td>{{alqui.libros?.titulo}}</td>                  
+                    <td class="acción">
+                        <a [routerLink]="['/home/alquiler/editar', alqui.id]"><img
+                                src="/assets/Imagenes/editar.png" class="descargar"></a>
+                        <a><img  (click)="alqui.id && Eliminar(alqui.id)"
+                                src="/assets/Imagenes/eliminar.png" class="descargar"></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>

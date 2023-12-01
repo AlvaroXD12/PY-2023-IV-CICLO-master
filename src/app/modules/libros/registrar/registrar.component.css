@@ -1,0 +1,67 @@
+div {
+    margin-bottom: 20px;
+  }
+  
+
+  .Titulo {
+    margin-left: 450px;
+    margin-top: -10px;
+    color: black;
+    font-family: Squada One;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+  }
+  
+ 
+  .boton_regresar {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px; 
+    margin: 0 auto; 
+  }
+  
+  .espacio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+ 
+  
+  
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+ 
+  }
+  
+  
+
+  label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  
+  select,
+  input[type="date"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  
+  }
+  
+  

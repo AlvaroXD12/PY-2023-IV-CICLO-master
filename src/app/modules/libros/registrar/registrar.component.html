@@ -1,0 +1,62 @@
+<div>
+  <a routerLink="/home/libro">
+    <img src="/assets/Imagenes/atras.png" class="boton_regresar" alt="Botón Regresar" />
+  </a>
+  <p class="Titulo">Registrar Libro</p>
+</div>
+
+<form (ngSubmit)="onSubmit()">
+
+  <div class="espacio">
+    <label class="datos">Titulo:</label>
+    <input type="text" id="titulo" [(ngModel)]="libro.titulo" name="titulo" class="form-control" />
+  </div>
+  <div class="espacio">
+    <label for="fechaEntrada" class="fecha_inicio">Fecha Lanzamiento:</label>
+    <input type="date" id="fecha_lanzamiento" [(ngModel)]="libro.fecha_lanzamiento" name="fecha_lanzamiento"
+      class="form-control" />
+  </div>
+
+  <div class="espacio">
+    <label class="datos">Idioma:</label>
+    <input type="text" id="idioma" [(ngModel)]="libro.idioma" name="idioma" class="form-control" />
+  </div>
+
+  <div class="espacio">
+    <label class="datos">Paginas:</label>
+    <input type="text" id="paginas" [(ngModel)]="libro.paginas" name="paginas" class="form-control" />
+  </div>
+
+  <div class="espacio">
+    <label class="datos">Descripcion:</label>
+    <input type="text" id="descripcion" [(ngModel)]="libro.descripcion" name="descripcion" class="form-control" />
+  </div>
+
+  <div class="espacio">
+    <label class="datos">Portada:</label>
+    <input type="text" id="portada" [(ngModel)]="libro.portada" name="portada" class="form-control" />
+  </div>
+
+  <div class="espacio">
+    <label for="lector" class="datos">Autor:</label>
+    <select class="tipo_doc" id="autores" [(ngModel)]="libro.autores" name="autores">
+      <option *ngFor="let auto of autor" [ngValue]="auto">{{auto.autor}}</option>
+    </select>
+  </div>
+
+  <div class="espacio">
+    <label for="lector" class="datos">Categoria:</label>
+    <select class="tipo_doc" id="categorias" [(ngModel)]="libro.categorias" name="categorias">
+      <option *ngFor="let cate of categoria" [ngValue]="cate">{{cate.categoria}}</option>
+    </select>
+  </div>
+
+  <div class="espacio">
+    <label for="lector" class="datos">Editorial:</label>
+    <select class="tipo_doc" id="editoriales" [(ngModel)]="libro.editoriales" name="editoriales">
+      <option *ngFor="let edit of editorial" [ngValue]="edit">{{edit.editorial}}</option>
+    </select>
+  </div>
+
+  <button type="submit">Guardar</button>
+</form>

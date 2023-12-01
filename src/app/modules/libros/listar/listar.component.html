@@ -1,0 +1,51 @@
+
+<div>
+    <a href="/menu"><img src="/assets/Imagenes/atras.png" class="boton_regresar"></a>
+    <p class="Titulo">Lista de Libros</p>
+</div>
+<div class="crear_buscar">
+    <div class="boton_crear">
+        <a [routerLink]="['/home/libro/registrar']" class="crear">
+            <p>REGISTRAR</p>
+        </a>
+    </div>
+</div>
+<div class="container_tabla">
+    <table class="tabla">
+        <thead>
+            <tr>
+                <th class="id">N°</th>
+                <th class="nombre_afiliacion">Titulo:</th>
+                <th class="nombre_afiliacion">Fecha Lanzamiento:</th>
+                <th class="nombre_afiliacion">Idioma:</th>
+                <th class="nombre_afiliacion">Paginas:</th>
+                <th class="nombre_afiliacion">Descripcion:</th>
+                <th class="nombre_afiliacion">Portada:</th>
+                <th class="nombre_afiliacion">Autor:</th>
+                <th class="nombre_afiliacion">Categoria:</th>
+                <th class="nombre_afiliacion">Editorial:</th>
+                <th colspan="3" class="acción">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let lib of libros">
+                <td>{{lib.id}}</td>
+                <td>{{lib.titulo}}</td>
+                <td>{{lib.fecha_lanzamiento}}</td>
+                <td>{{lib.idioma}}</td>
+                <td>{{lib.paginas}}</td>
+                <td>{{lib.descripcion}}</td>
+                <td>{{lib.portada}}</td>
+                <td>{{lib.autores?.autor}}</td>
+                <td>{{lib.categorias?.categoria}}</td>
+                <td>{{lib.editoriales?.editorial}}</td>                  
+                <td class="acción">
+                    <a [routerLink]="['/home/libro/editar', lib.id]"><img
+                            src="/assets/Imagenes/editar.png" class="descargar"></a>
+                    <a><img  (click)="lib.id && Eliminar(lib.id)"
+                            src="/assets/Imagenes/eliminar.png" class="descargar"></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,49 @@
+<nav class="menu__side">
+  <div class="name__page">
+    <img src="/assets/Imagenes/WhatsApp_Image_2023-11-15_at_3.43.41_PM-removebg-preview.png" class="imagen">
+    <i [routerLink]="['/home/sidebar/welcome']"></i>
+    <h4>VIRTUAL LIBRARY</h4>
+  </div>
+  <ul class="options__menu">
+    <li>
+      <a class="option" [routerLink]="['/home/alquileres']">
+        <i class="far fa-file" title="Portafolio"></i>
+        <h4>Alquileres</h4>
+      </a>
+    </li>
+
+    <li>
+      <a class="option" href="#">
+        <i class="fas fa-video" title="Cursos"></i>
+        <h4>Autores</h4>
+      </a>
+    </li>
+
+    <li>
+      <a class="option" href="#">
+        <i class="far fa-sticky-note" title="Blog"></i>
+        <h4>Categorias</h4>
+      </a>
+    </li>
+
+    <li>
+      <a class="option" href="#">
+        <i class="far fa-id-badge" title="Contacto"></i>
+        <h4>Editoriales</h4>
+      </a>
+    </li>
+
+    <li href="#">
+      <a class="option" href="#">
+        <i class="far fa-address-card" title="Nosotros"></i>
+        <h4>Lectores</h4>
+      </a>
+    </li>
+    <li href="#">
+      <a class="option" [routerLink]="['/home/libro']">
+        <i class="far fa-address-card" title="Nosotros"></i>
+        <h4>Libros</h4>
+      </a>
+    </li>
+  </ul>
+</nav>
